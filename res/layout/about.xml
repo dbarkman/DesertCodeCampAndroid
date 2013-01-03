@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/aboutScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fadeScrollbars="true"
+	android:focusable="true"
+	android:focusableInTouchMode="true" >
+
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="15dp" >
+
+		<TextView
+			android:id="@+id/intro"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="15dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="5dp"
+			android:text="@string/intro"
+			android:textSize="17dp" />
+
+		<TextView
+			android:id="@+id/location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/intro"
+			android:layout_marginTop="10dp"
+			android:text="@string/location"
+			android:textSize="17dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/location"
+			android:layout_marginTop="2dp"
+			android:autoLink="map"
+			android:text="@string/address"
+			android:textSize="17dp" />
+
+		<TextView
+			android:id="@+id/starts"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/address"
+			android:layout_marginTop="10dp"
+			android:text="@string/when"
+			android:textSize="17dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/startTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/address"
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="10dp"
+			android:layout_toRightOf="@+id/starts"
+			android:text="@string/whenTimes"
+			android:textSize="17dp" />
+
+		<TextView
+			android:id="@+id/contactUs"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/starts"
+			android:layout_marginTop="10dp"
+			android:text="@string/contactUs"
+			android:textSize="17dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/sendEmail"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/starts"
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="10dp"
+			android:layout_toRightOf="@+id/contactUs"
+			android:autoLink="email"
+			android:text="@string/sendEmail"
+			android:textSize="17dp" />
+
+		<TextView
+			android:id="@+id/developedBy"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/contactUs"
+			android:layout_marginTop="20dp"
+			android:text="@string/developedBy"
+			android:textSize="17dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/realSimpleApps"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/developedBy"
+			android:layout_marginTop="2dp"
+			android:text="@string/realSimpleApps"
+			android:textSize="17dp" />
+
+		<TextView
+			android:id="@+id/rsaWeb"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/realSimpleApps"
+			android:layout_marginTop="2dp"
+			android:autoLink="web"
+			android:text="@string/rsaWeb"
+			android:textSize="16dp" />
+		
+		<TextView
+			android:id="@+id/rsaEmail"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/intro"
+			android:layout_below="@+id/rsaWeb"
+			android:layout_marginTop="2dp"
+			android:autoLink="email"
+			android:text="@string/rsaEmail"
+			android:textSize="16dp" />
+		
+			</RelativeLayout>
+</ScrollView>

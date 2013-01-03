@@ -1,0 +1,60 @@
+<resources>
+
+	<string name="apiURI">http://desertcodecamp.com/Services/</string>
+	<string name="shortName">nov2012</string>
+	<string name="campId">5</string>
+
+	<string name="flurryAPIKey">8KKF7PTKBZCWVGX7TNYC</string>
+
+	<string name="app_name">Desert Code Camp</string>
+
+	<string name="sessionPresenters">Presenters: </string>
+	<string name="sessionRoom">Room: </string>
+	<string name="sessionTime">Time: </string>
+	<string name="tbd">TBD</string>
+
+	<string name="refresh">Refresh</string>
+	<string name="filter">Filter</string>
+	<string name="about">About</string>
+	<string name="tracks">Tracks</string>
+	<string name="times">Times</string>
+	<string name="interested">Interested</string>
+	<string name="presenting">Presenting</string>
+	<string name="addSession">Add Session To My Schedule</string>
+	<string name="allSessions">All Sessions</string>
+	<string name="mySessions">My Sessions</string>
+	<string name="mySchedule">My Schedule</string>
+	<string name="enterLogin">Enter Login</string>
+	<string name="updateLogin">Update Login</string>
+	<string name="removeSessions">Remove Sessions</string>
+
+	<string name="usernameEntryHint">login</string>
+	<string name="usernameEntryActionLabel">Save</string>
+
+	<string name="enterLoginMessage">To view interested and presenting sessions, enter your DesertCodeCamp.com login and tap Save.</string>
+	<string name="noLoginMessage">This screen will display sessions you\'ve marked as Interested on the DesertCodeCamp.com website and sessions you\'ve volunteered to present. In order to view those sessions, please tap Enter Login in the menu and enter your DesertCodeCamp.com login in the alert dialog.</string>
+	<string name="noInterestedMessage">This screen will display sessions you\'ve marked as Interested on the DesertCodeCamp.com website. In order to mark sessions as Interested,  log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, click the More Info button, review the session, and if interested, check I might attend and click Save. Once you\'ve marked some sessions as Interested, return here and tap Refresh.</string>
+	<string name="noPresentingMessage">This screen will display sessions you\'ve volunteered to present. The November 2012 camp is no longer taking new sessions, but some sessions still need presenters. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, look for sessions marked with the Needs a Presenter icon. Click the More Info button, review the session, and if interested, check Teach This and click Save. A Desert Code Camp coordinator will then contact you.</string>
+	<string name="noScheduleMessage">This screen is used to manage your schedule for sessions you might want to attend at Desert Code Camp. To add sessions to your schedule, go to All Sessions or My Sessions and navigate into the details of a session.  Once in the session details, tap the Add Session To My Schedule menu item. Then return to this screen to view you selected sessions.</string>
+	<string name="removeSessionsMessage">In order to remove a session from your schedule, long press (touch and hold) a session in the list, until you are prompted to remove it.</string>
+	<string name="removeSessionsPrompt">Remove session from schedule?</string>
+	
+	<string name="problemWithListViewAlertMessage">We have encountered a problem setting up the list view. If it does not appear to be working correctly, navigate back, then return to this screen. If the problem persists, please visit reallysimpleapps.com/support.</string>
+
+	<string name="dcc">Desert Code Camp</string>
+	<string name="intro">Code Camps have been taking place all over the country. This is a free, one-day event put on by the local Phoenix community to help promote software development in general.\nThere is no right or wrong language, platform, or technology. If a topic relates in any way to the code that causes a machine to produce a desired result, it\'s welcome here.</string>
+	<string name="location">Chandler - Gilbert Community College, Pecos Campus</string>
+	<string name="address">2626 E. Pecos Road\nChandler, AZ 85225</string>
+	<string name="when">When:</string>
+	<string name="whenTimes">November 17, 2012 8a - 6p</string>
+	<string name="contactUs">Email:</string>
+	<string name="sendEmail">jguadagno@sevdnug.org</string>
+	<string name="developedBy">App Developed By:</string>
+	<string name="realSimpleApps">David Barkman @ RealSimpleApps</string>
+	<string name="rsaWeb">realsimpleapps.com @realSimpleApps</string>
+	<string name="rsaEmail">david.barkman13@gmail.com @cybler</string>
+
+	<string name="offlineTitle">Connection Error</string>
+	<string name="offlineAlert">Could not connect to Desert Code Camp, the service or your network may be down.</string>
+
+</resources>

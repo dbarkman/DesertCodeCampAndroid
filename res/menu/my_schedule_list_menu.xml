@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item 
+        android:id="@+id/removeSessions" 
+        android:title="@string/removeSessions"
+        android:showAsAction="always" >
+    </item> 
+	<item 
+        android:id="@+id/allSessions" 
+        android:title="@string/allSessions"
+        android:showAsAction="never" >
+    </item> 
+	<item 
+        android:id="@+id/mySessions" 
+        android:title="@string/mySessions"
+        android:showAsAction="never" >
+    </item> 
+	<item 
+        android:id="@+id/about" 
+        android:title="@string/about"
+        android:showAsAction="never" >
+    </item> 
+</menu>

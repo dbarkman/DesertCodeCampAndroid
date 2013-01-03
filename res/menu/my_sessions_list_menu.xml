@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/refresh"
+        android:title="@string/refresh"
+        android:icon="@drawable/refresh"
+        android:showAsAction="always" >
+    </item>
+	<item 
+        android:id="@+id/changeFilter" 
+        android:title="@string/presenting"
+        android:showAsAction="always" >
+    </item> 
+	<item 
+        android:id="@+id/enterLogin" 
+        android:title="@string/enterLogin"
+        android:showAsAction="always" >
+    </item> 
+	<item 
+        android:id="@+id/updateLogin" 
+        android:title="@string/updateLogin"
+        android:showAsAction="never" >
+    </item> 
+	<item 
+        android:id="@+id/allSessions" 
+        android:title="@string/allSessions"
+        android:showAsAction="never" >
+    </item> 
+	<item 
+        android:id="@+id/mySchedule" 
+        android:title="@string/mySchedule"
+        android:showAsAction="never" >
+    </item> 
+	<item 
+        android:id="@+id/about" 
+        android:title="@string/about"
+        android:showAsAction="never" >
+    </item> 
+</menu>

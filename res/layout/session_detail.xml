@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/sessionDetailScrollView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fadeScrollbars="true"
+	android:focusable="true"
+	android:focusableInTouchMode="true" >
+
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="15dp" >
+
+		<TextView
+			android:id="@+id/name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="15dp"
+			android:textSize="18dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/sessionAbstract"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/name"
+			android:layout_below="@+id/name"
+			android:layout_marginTop="5dp"
+			android:textSize="18dp" />
+
+		<TextView
+			android:id="@+id/presentersLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/sessionAbstract"
+			android:layout_below="@+id/sessionAbstract"
+			android:layout_marginTop="15dp"
+			android:textSize="18dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/presenters"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/presentersLabel"
+			android:layout_below="@+id/presentersLabel"
+			android:layout_marginTop="5dp"
+			android:textSize="18dp"
+			android:autoLink="email" />
+
+		<TextView
+			android:id="@+id/roomLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/sessionAbstract"
+			android:layout_below="@+id/presenters"
+			android:layout_marginTop="15dp"
+			android:textSize="18dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/room"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/presenters"
+			android:layout_marginTop="15dp"
+			android:layout_toRightOf="@+id/roomLabel"
+			android:layout_marginLeft="5dp"
+			android:textSize="18dp" />
+
+		<TextView
+			android:id="@+id/timeLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/sessionAbstract"
+			android:layout_below="@+id/roomLabel"
+			android:layout_marginTop="5dp"
+			android:textSize="18dp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/roomLabel"
+			android:layout_marginTop="5dp"
+			android:layout_toRightOf="@+id/timeLabel"
+			android:layout_marginLeft="5dp"
+			android:textSize="18dp" />
+
+	</RelativeLayout>
+
+</ScrollView>

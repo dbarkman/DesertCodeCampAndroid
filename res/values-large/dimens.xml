@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Large + -->
+    <dimen name="fontHeight">18sp</dimen>
+    <dimen name="smallFontHeight">12sp</dimen>
+    <dimen name="fontHeightLeft">14sp</dimen>
+    <dimen name="fontHeightRight">18sp</dimen>
+    
+    <dimen name="incrementHeight">50sp</dimen>
+    <dimen name="dividerHeight">31sp</dimen>
+    <dimen name="headerHeight">27sp</dimen>
+    
+    <dimen name="borderPadding">4sp</dimen>
+    <dimen name="borderPadding7">8sp</dimen>
+    <dimen name="leftPadding">4sp</dimen>
+    <dimen name="leftPadding7">8sp</dimen>
+    <dimen name="rightPadding">4sp</dimen>
+    <dimen name="topPadding">4sp</dimen>
+    <dimen name="topPadding5">6sp</dimen>
+    <dimen name="topPadding7">8sp</dimen>
+    <dimen name="bottomPadding">31sp</dimen>
+    <dimen name="lineLeftPadding">4sp</dimen>
+    <dimen name="lineTopPadding">5sp</dimen>
+    	
+    <dimen name="roundCornerRadius6">7sp</dimen>
+    <dimen name="roundCornerRadius18">0sp</dimen>
+</resources>

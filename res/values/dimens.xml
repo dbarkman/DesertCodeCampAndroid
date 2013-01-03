@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Medium - -->
+    <dimen name="fontHeight">16sp</dimen>
+    <dimen name="smallFontHeight">10sp</dimen>
+    <dimen name="fontHeightLeft">12sp</dimen>
+    <dimen name="fontHeightRight">15sp</dimen>
+    
+    <dimen name="incrementHeight">42sp</dimen>
+    <dimen name="dividerHeight">26sp</dimen>
+    <dimen name="headerHeight">23sp</dimen>
+    
+    <dimen name="borderPadding">3sp</dimen>
+    <dimen name="borderPadding7">7sp</dimen>
+    <dimen name="leftPadding">3sp</dimen>
+    <dimen name="leftPadding7">7sp</dimen>
+    <dimen name="rightPadding">3sp</dimen>
+    <dimen name="topPadding">3sp</dimen>
+    <dimen name="topPadding5">5sp</dimen>
+    <dimen name="topPadding7">7sp</dimen>
+    <dimen name="bottomPadding">26sp</dimen>
+    <dimen name="lineLeftPadding">3sp</dimen>
+    <dimen name="lineTopPadding">4sp</dimen>
+    	
+    <dimen name="roundCornerRadius6">6sp</dimen>
+    <dimen name="roundCornerRadius18">0sp</dimen>
+</resources>
