@@ -1,10 +1,10 @@
 <resources>
 
 	<string name="apiURI">http://desertcodecamp.com/Services/</string>
-	<string name="shortName">apr2013</string>
-	<string name="campId">6</string>
+	<string name="shortName">nov2013</string>
+	<string name="campId">7</string>
 
-	<string name="flurryAPIKey">SDXGSH7SJ6MKFXC423ZK</string>
+	<string name="flurryAPIKey">3GRM92PMQJRPGKHZQDPQ</string>
 
 	<string name="app_name">Desert Code Camp</string>
 
@@ -33,10 +33,10 @@
 
 	<string name="enterLoginMessage">To view interested and presenting sessions, enter your DesertCodeCamp.com login and tap Save.</string>
 	<string name="noLoginMessage">This screen will display sessions you\'ve marked as Interested on the DesertCodeCamp.com website and sessions you\'ve volunteered to present. In order to view those sessions, please tap Enter Login in the menu and enter your DesertCodeCamp.com login in the alert dialog.</string>
-	<string name="noInterestedMessage">This screen will display sessions you\'ve marked as Interested on the DesertCodeCamp.com website. In order to mark sessions as Interested,  log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, click the More Info button, review the session, and if interested, check I might attend and click Save. Once you\'ve marked some sessions as Interested, return here and tap Refresh.</string>
+	<string name="noInterestedMessage">This screen will display sessions you\'ve marked as Interested on the DesertCodeCamp.com website. In order to mark sessions as Interested,  log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, click the More Info button, review the session, and if interested, set I want to attend this to Yes and click Save. Once you\'ve marked some sessions as Interested, return here and tap Refresh.</string>
 	<string name="noPresentingMessage">This screen will display sessions you\'ve volunteered to present. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, fill out the form at the top of the page, with all the details, for your suggested session. A Desert Code Camp coordinator will then contact you.</string>
-	<string name="noPresentingMessageSessionsClosed">This screen will display sessions you\'ve volunteered to present. The November 2012 camp is no longer taking new sessions, but some sessions still need presenters. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, look for sessions marked with the Needs a Presenter icon. Click the More Info button, review the session, and if interested, check Teach This and click Save. A Desert Code Camp coordinator will then contact you.</string>
-	<string name="noScheduleMessage">This screen is used to manage your schedule for sessions you might want to attend at Desert Code Camp. To add sessions to your schedule, go to All Sessions or My Sessions and navigate into the details of a session.  Once in the session details, tap the Add Session To My Schedule menu item. Then return to this screen to view you selected sessions.</string>
+	<string name="noPresentingMessageSessionsClosed">This screen will display sessions you\'ve volunteered to present. The November 2013 camp is no longer taking new sessions, but some sessions still need presenters. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, look for sessions marked with the Needs a Presenter icon. Click the More Info button, review the session, and if interested, set I want to teach this to Yes and click Save. A Desert Code Camp coordinator will then contact you.</string>
+	<string name="noScheduleMessage">This screen is used to manage your schedule for sessions you might want to attend at Desert Code Camp. To add sessions to your schedule, go to All Sessions or My Sessions and navigate into the details of a session.  Once in the session details, tap the Add Session To My Schedule menu item. Then return to this screen to view your selected sessions.</string>
 	<string name="removeSessionsMessage">In order to remove a session from your schedule, long press (touch and hold) a session in the list, until you are prompted to remove it.</string>
 	<string name="removeSessionsPrompt">Remove session from schedule?</string>
 	
@@ -47,7 +47,7 @@
 	<string name="location">Chandler - Gilbert Community College, Pecos Campus</string>
 	<string name="address">2626 E. Pecos Road\nChandler, AZ 85225</string>
 	<string name="when">When:</string>
-	<string name="whenTimes">April 20, 2013 8a - 6p</string>
+	<string name="whenTimes">November 9, 2013 9a - 5p</string>
 	<string name="contactUs">Email:</string>
 	<string name="sendEmail">jguadagno@sevdnug.org</string>
 	<string name="developedBy">App Developed By:</string>

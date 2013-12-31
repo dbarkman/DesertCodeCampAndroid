@@ -346,7 +346,7 @@ public class MySessionsListFragment extends SherlockListFragment {
 			FlurryAgent.logEvent("No Interested Session Data");
 			break;
 		case 1:
-			noDataMessage = (String) getActivity().getText(R.string.noPresentingMessage);
+			noDataMessage = (String) getActivity().getText(R.string.noPresentingMessageSessionsClosed);
 			FlurryAgent.logEvent("No Presenting Session Data");
 			break;
 		}

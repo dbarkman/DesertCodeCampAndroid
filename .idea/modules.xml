@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock-4.1/ActionBarSherlock-4.1.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock-4.1/ActionBarSherlock-4.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesertCodeCamp.iml" filepath="$PROJECT_DIR$/DesertCodeCamp.iml" />
+    </modules>
+  </component>
+</project>
+
