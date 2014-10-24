@@ -1,12 +1,13 @@
 package com.realsimpleapps.desertcodecamp;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import com.actionbarsherlock.app.SherlockActivity;
+import android.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 
-public class AboutActivity extends SherlockActivity {
+public class AboutActivity extends Activity {
 
 	private static final String tag = "AboutActivity";
 
@@ -14,7 +15,10 @@ public class AboutActivity extends SherlockActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.about);
+        getActionBar().setDisplayShowHomeEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        setContentView(R.layout.about);
 	}
 
 	@Override
@@ -33,6 +37,16 @@ public class AboutActivity extends SherlockActivity {
 
 		FlurryAgent.logEvent("About");
 	}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return false;
+    }
 
 	@Override
 	public void onStop() {

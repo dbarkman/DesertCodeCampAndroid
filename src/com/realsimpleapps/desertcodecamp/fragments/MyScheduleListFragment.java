@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.app.ListFragment;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,10 +27,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.AboutActivity;
@@ -34,7 +34,7 @@ import com.realsimpleapps.desertcodecamp.FilterListActivity;
 import com.realsimpleapps.desertcodecamp.MySessionsListActivity;
 import com.realsimpleapps.desertcodecamp.adapters.SectionedArrayAdapter;
 
-public class MyScheduleListFragment extends SherlockListFragment {
+public class MyScheduleListFragment extends ListFragment {
 
 	private static final String tag = "MyScheduleListFragment";
 
@@ -74,6 +74,9 @@ public class MyScheduleListFragment extends SherlockListFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+        getActivity().getActionBar().setDisplayShowHomeEnabled(true);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 	@Override
@@ -234,18 +237,21 @@ public class MyScheduleListFragment extends SherlockListFragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.removeSessions:
-			howToRemoveSessions();
-			return true;
-		case R.id.allSessions:
-			startActivity(new Intent(getActivity(), FilterListActivity.class));
-			return true;
-		case R.id.mySessions:
-			startActivity(new Intent(getActivity(), MySessionsListActivity.class));
-			return true;
-		case R.id.about:
-			startActivity(new Intent(getActivity(), AboutActivity.class));
-			return true;
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+            case R.id.removeSessions:
+                howToRemoveSessions();
+                return true;
+            case R.id.allSessions:
+                startActivity(new Intent(getActivity(), FilterListActivity.class));
+                return true;
+            case R.id.mySessions:
+                startActivity(new Intent(getActivity(), MySessionsListActivity.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(getActivity(), AboutActivity.class));
+                return true;
 		}
 		return false;
 	}

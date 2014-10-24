@@ -4,19 +4,4 @@
         android:title="@string/addSession"
         android:showAsAction="always" >
     </item>
-	<item 
-        android:id="@+id/allSessions" 
-        android:title="@string/allSessions"
-        android:showAsAction="never" >
-    </item> 
-	<item 
-        android:id="@+id/mySessions" 
-        android:title="@string/mySessions"
-        android:showAsAction="never" >
-    </item> 
-	<item 
-        android:id="@+id/mySchedule" 
-        android:title="@string/mySchedule"
-        android:showAsAction="never" >
-    </item> 
 </menu>

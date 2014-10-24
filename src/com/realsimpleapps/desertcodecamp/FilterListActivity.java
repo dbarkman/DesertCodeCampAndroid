@@ -1,13 +1,15 @@
 package com.realsimpleapps.desertcodecamp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+import android.view.MenuItem;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.fragments.FilterListFragment;
 
-public class FilterListActivity extends SherlockFragmentActivity {
+public class FilterListActivity extends Activity {
 
 	private static final String tag = "FilterListActivity";
 
@@ -31,7 +33,7 @@ public class FilterListActivity extends SherlockFragmentActivity {
 			}
 			FilterListFragment firstFragment = new FilterListFragment();
 			firstFragment.setArguments(getIntent().getExtras());
-			getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
+			getFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
 		}
 	}
 }

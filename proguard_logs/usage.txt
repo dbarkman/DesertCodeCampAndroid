@@ -1,0 +1,122 @@
+com.flurry.android.Constants
+com.flurry.android.FlurryAgent:
+    56:66:public static void setVersionName(java.lang.String)
+    82:82:public static java.lang.String getReleaseVersion()
+    91:97:public static void setReportLocation(boolean)
+    120:125:public static void setLogLevel(int)
+    159:164:public static void setLogEvents(boolean)
+    181:182:public static boolean getUseHttps()
+    193:198:public static void setCaptureUncaughtExceptions(boolean)
+    360:377:public static void logEvent(java.lang.String,java.util.Map)
+    466:483:public static void endTimedEvent(java.lang.String,java.util.Map)
+    497:518:public static void onError(java.lang.String,java.lang.String,java.lang.String)
+    550:563:public static void onEvent(java.lang.String)
+    572:589:public static void onEvent(java.lang.String,java.util.Map)
+    601:610:public static void onPageView()
+    615:620:public static void setReportUrl(java.lang.String)
+    633:639:public static void setLocationCriteria(android.location.Criteria)
+    653:667:public static void setAge(int)
+    675:688:public static void setGender(byte)
+    697:707:public static void setUserId(java.lang.String)
+    713:714:static void setInternalLoggingEnabled(boolean)
+com.flurry.android.InstallReceiver
+com.flurry.sdk.bx:
+    127:127:int c()
+    131:131:int d()
+    135:135:int e()
+    139:139:java.lang.String f()
+    144:154:public java.lang.String g()
+    244:248:public void a(java.lang.String,java.util.Map)
+    272:276:public void b(java.lang.String,java.util.Map)
+    280:293:public void a(java.lang.String,java.lang.String,java.lang.String)
+    303:307:public void c(java.lang.String)
+    310:314:public void c(java.lang.String,java.util.Map)
+    317:321:public void i()
+    360:366:public java.lang.String j()
+    370:376:public java.lang.String k()
+    380:386:public java.lang.String l()
+    444:445:public void a(boolean)
+com.flurry.sdk.by:
+    58:62:public synchronized void a(java.lang.String)
+    89:90:private void c()
+com.flurry.sdk.cl:
+    447:448:public synchronized void g()
+com.flurry.sdk.eg:
+    58:58:public android.content.pm.PackageManager c()
+com.flurry.sdk.ek
+com.flurry.sdk.el:
+    49:60:public static android.content.pm.ApplicationInfo b(android.content.Context)
+    70:71:public static java.lang.String d(android.content.Context)
+    76:77:public static android.os.Bundle e(android.content.Context)
+com.flurry.sdk.er:
+    53:54:public int b()
+com.flurry.sdk.es
+com.flurry.sdk.es$1
+com.flurry.sdk.es$1$1
+com.flurry.sdk.es$1$2
+com.flurry.sdk.es$2
+com.flurry.sdk.es$2$1
+com.flurry.sdk.es$a
+com.flurry.sdk.et:
+    83:105:public static void a(java.io.File,java.lang.String)
+com.flurry.sdk.ew:
+    43:43:public static org.apache.http.client.HttpClient a(org.apache.http.params.HttpParams)
+com.flurry.sdk.ex:
+    64:65:public static void a(int)
+    68:69:public static void a(boolean)
+    76:77:public static void a(java.lang.String,java.lang.String,java.lang.Throwable)
+    96:97:public static void c(java.lang.String,java.lang.String)
+    104:105:public static void d(java.lang.String,java.lang.String)
+com.flurry.sdk.fe:
+    202:222:public com.flurry.sdk.fe$a e()
+com.flurry.sdk.fe$a
+com.flurry.sdk.fg
+com.flurry.sdk.fh:
+    68:73:public static java.lang.String b(java.lang.String)
+    81:86:public static java.lang.String c(java.lang.String)
+    126:135:public static java.lang.String a(byte[])
+    141:147:public static boolean a(long)
+    193:195:public static boolean a(android.content.Intent)
+    199:205:public static boolean b(android.content.Intent)
+    209:209:public static java.lang.String e(java.lang.String)
+    214:226:public static java.util.Map f(java.lang.String)
+com.flurry.sdk.fj
+com.realsimpleapps.desert.code.camp.BuildConfig
+com.realsimpleapps.desert.code.camp.R
+com.realsimpleapps.desert.code.camp.R$animator
+com.realsimpleapps.desert.code.camp.R$attr
+com.realsimpleapps.desert.code.camp.R$color
+com.realsimpleapps.desert.code.camp.R$dimen
+com.realsimpleapps.desert.code.camp.R$drawable
+com.realsimpleapps.desert.code.camp.R$id
+com.realsimpleapps.desert.code.camp.R$layout
+com.realsimpleapps.desert.code.camp.R$menu
+com.realsimpleapps.desert.code.camp.R$string
+com.realsimpleapps.desert.code.camp.R$style
+com.realsimpleapps.desertcodecamp.AboutActivity:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.FilterListActivity:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.FilteredSessionsListActivity:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.MyScheduleListActivity:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.MySessionsListActivity:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.adapters.SectionedArrayAdapter:
+    private static final java.lang.String tag
+    private static final int STATE_UNKNOWN
+    private static final int STATE_SECTIONED_CELL
+    private static final int STATE_REGULAR_CELL
+com.realsimpleapps.desertcodecamp.fragments.FilterListFragment:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.fragments.FilteredSessionsListFragment:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.fragments.MyScheduleListFragment:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.fragments.MySessionsListFragment:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.fragments.SessionDetailFragment:
+    private static final java.lang.String tag
+com.realsimpleapps.desertcodecamp.tasks.RestTask:
+    public static final java.lang.String httpResponse

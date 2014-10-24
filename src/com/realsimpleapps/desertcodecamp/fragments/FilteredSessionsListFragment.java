@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.app.ListFragment;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,10 +20,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.AboutActivity;
@@ -27,7 +27,7 @@ import com.realsimpleapps.desertcodecamp.MyScheduleListActivity;
 import com.realsimpleapps.desertcodecamp.MySessionsListActivity;
 import com.realsimpleapps.desertcodecamp.adapters.SectionedArrayAdapter;
 
-public class FilteredSessionsListFragment extends SherlockListFragment {
+public class FilteredSessionsListFragment extends ListFragment {
 
 	private static final String tag = "FilteredSessionListFragment";
 
@@ -59,7 +59,10 @@ public class FilteredSessionsListFragment extends SherlockListFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		Bundle extras = getActivity().getIntent().getExtras();
+        getActivity().getActionBar().setDisplayShowHomeEnabled(true);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Bundle extras = getActivity().getIntent().getExtras();
 		if (extras != null) {
 			filterType = extras.getInt("allSessionsFilterType");
 			filteredName = extras.getString("filteredName");
@@ -185,21 +188,24 @@ public class FilteredSessionsListFragment extends SherlockListFragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.refresh:
-			FlurryAgent.logEvent("RefreshAllSessions");
-			Intent broadcastIntent = new Intent();
-			broadcastIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
-			getActivity().sendBroadcast(broadcastIntent);
-			return true;
-		case R.id.mySessions:
-			startActivity(new Intent(getActivity(), MySessionsListActivity.class));
-			return true;
-		case R.id.mySchedule:
-			startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
-			return true;
-		case R.id.about:
-			startActivity(new Intent(getActivity(), AboutActivity.class));
-			return true;
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+            case R.id.refresh:
+                FlurryAgent.logEvent("RefreshAllSessions");
+                Intent broadcastIntent = new Intent();
+                broadcastIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
+                getActivity().sendBroadcast(broadcastIntent);
+                return true;
+            case R.id.mySessions:
+                startActivity(new Intent(getActivity(), MySessionsListActivity.class));
+                return true;
+            case R.id.mySchedule:
+                startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(getActivity(), AboutActivity.class));
+                return true;
 		}
 		return false;
 	}

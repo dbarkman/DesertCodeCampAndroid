@@ -1,0 +1,165 @@
+com.flurry.sdk.ej: com.flurry.sdk.ej[] values()
+com.flurry.sdk.ej: com.flurry.sdk.ej valueOf(java.lang.String)
+com.flurry.sdk.fe$a: com.flurry.sdk.fe$a[] values()
+com.flurry.sdk.fe$a: com.flurry.sdk.fe$a valueOf(java.lang.String)
+com.realsimpleapps.desert.code.camp.R$animator: int slide_in_left
+com.realsimpleapps.desert.code.camp.R$animator: int slide_in_right
+com.realsimpleapps.desert.code.camp.R$animator: int slide_out_left
+com.realsimpleapps.desert.code.camp.R$animator: int slide_out_right
+com.realsimpleapps.desert.code.camp.R$color: int black
+com.realsimpleapps.desert.code.camp.R$color: int blue
+com.realsimpleapps.desert.code.camp.R$color: int ccOrange
+com.realsimpleapps.desert.code.camp.R$color: int darkGray
+com.realsimpleapps.desert.code.camp.R$color: int red
+com.realsimpleapps.desert.code.camp.R$color: int white
+com.realsimpleapps.desert.code.camp.R$dimen: int borderPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int borderPadding7
+com.realsimpleapps.desert.code.camp.R$dimen: int bottomPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int dividerHeight
+com.realsimpleapps.desert.code.camp.R$dimen: int fontHeight
+com.realsimpleapps.desert.code.camp.R$dimen: int fontHeightLeft
+com.realsimpleapps.desert.code.camp.R$dimen: int fontHeightRight
+com.realsimpleapps.desert.code.camp.R$dimen: int headerHeight
+com.realsimpleapps.desert.code.camp.R$dimen: int incrementHeight
+com.realsimpleapps.desert.code.camp.R$dimen: int leftPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int leftPadding7
+com.realsimpleapps.desert.code.camp.R$dimen: int lineLeftPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int lineTopPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int rightPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int roundCornerRadius18
+com.realsimpleapps.desert.code.camp.R$dimen: int roundCornerRadius6
+com.realsimpleapps.desert.code.camp.R$dimen: int smallFontHeight
+com.realsimpleapps.desert.code.camp.R$dimen: int topPadding
+com.realsimpleapps.desert.code.camp.R$dimen: int topPadding5
+com.realsimpleapps.desert.code.camp.R$dimen: int topPadding7
+com.realsimpleapps.desert.code.camp.R$drawable: int ic_launcher
+com.realsimpleapps.desert.code.camp.R$drawable: int refresh
+com.realsimpleapps.desert.code.camp.R$id: int about
+com.realsimpleapps.desert.code.camp.R$id: int aboutScrollView
+com.realsimpleapps.desert.code.camp.R$id: int addSession
+com.realsimpleapps.desert.code.camp.R$id: int address
+com.realsimpleapps.desert.code.camp.R$id: int allSessions
+com.realsimpleapps.desert.code.camp.R$id: int changeFilter
+com.realsimpleapps.desert.code.camp.R$id: int contactUs
+com.realsimpleapps.desert.code.camp.R$id: int developedBy
+com.realsimpleapps.desert.code.camp.R$id: int enterLogin
+com.realsimpleapps.desert.code.camp.R$id: int filtered_sessions_list_fragment
+com.realsimpleapps.desert.code.camp.R$id: int filtered_sessions_list_fragment_container
+com.realsimpleapps.desert.code.camp.R$id: int fragment_container
+com.realsimpleapps.desert.code.camp.R$id: int intro
+com.realsimpleapps.desert.code.camp.R$id: int label
+com.realsimpleapps.desert.code.camp.R$id: int location
+com.realsimpleapps.desert.code.camp.R$id: int mySchedule
+com.realsimpleapps.desert.code.camp.R$id: int mySessions
+com.realsimpleapps.desert.code.camp.R$id: int my_schedule_list_fragment
+com.realsimpleapps.desert.code.camp.R$id: int my_schedule_list_fragment_container
+com.realsimpleapps.desert.code.camp.R$id: int my_sessions_list_fragment
+com.realsimpleapps.desert.code.camp.R$id: int my_sessions_list_fragment_container
+com.realsimpleapps.desert.code.camp.R$id: int name
+com.realsimpleapps.desert.code.camp.R$id: int presenters
+com.realsimpleapps.desert.code.camp.R$id: int presentersLabel
+com.realsimpleapps.desert.code.camp.R$id: int realSimpleApps
+com.realsimpleapps.desert.code.camp.R$id: int refresh
+com.realsimpleapps.desert.code.camp.R$id: int removeSessions
+com.realsimpleapps.desert.code.camp.R$id: int room
+com.realsimpleapps.desert.code.camp.R$id: int roomLabel
+com.realsimpleapps.desert.code.camp.R$id: int rsaEmail
+com.realsimpleapps.desert.code.camp.R$id: int rsaWeb
+com.realsimpleapps.desert.code.camp.R$id: int sendEmail
+com.realsimpleapps.desert.code.camp.R$id: int separator
+com.realsimpleapps.desert.code.camp.R$id: int sessionAbstract
+com.realsimpleapps.desert.code.camp.R$id: int sessionDetailScrollView
+com.realsimpleapps.desert.code.camp.R$id: int session_detail_fragment
+com.realsimpleapps.desert.code.camp.R$id: int startTime
+com.realsimpleapps.desert.code.camp.R$id: int starts
+com.realsimpleapps.desert.code.camp.R$id: int time
+com.realsimpleapps.desert.code.camp.R$id: int timeLabel
+com.realsimpleapps.desert.code.camp.R$id: int txtTitle
+com.realsimpleapps.desert.code.camp.R$id: int updateLogin
+com.realsimpleapps.desert.code.camp.R$layout: int about
+com.realsimpleapps.desert.code.camp.R$layout: int filter_list
+com.realsimpleapps.desert.code.camp.R$layout: int filtered_sessions_list_fragment
+com.realsimpleapps.desert.code.camp.R$layout: int my_schedule_list_fragment
+com.realsimpleapps.desert.code.camp.R$layout: int my_sessions_list_fragment
+com.realsimpleapps.desert.code.camp.R$layout: int row_layout
+com.realsimpleapps.desert.code.camp.R$layout: int sectioned_list_item
+com.realsimpleapps.desert.code.camp.R$layout: int session_detail
+com.realsimpleapps.desert.code.camp.R$menu: int filter_list_menu
+com.realsimpleapps.desert.code.camp.R$menu: int filtered_sessions_list_menu
+com.realsimpleapps.desert.code.camp.R$menu: int my_schedule_list_menu
+com.realsimpleapps.desert.code.camp.R$menu: int my_sessions_list_menu
+com.realsimpleapps.desert.code.camp.R$menu: int session_detail_menu
+com.realsimpleapps.desert.code.camp.R$string: int about
+com.realsimpleapps.desert.code.camp.R$string: int addSession
+com.realsimpleapps.desert.code.camp.R$string: int address
+com.realsimpleapps.desert.code.camp.R$string: int allSessions
+com.realsimpleapps.desert.code.camp.R$string: int apiURI
+com.realsimpleapps.desert.code.camp.R$string: int app_name
+com.realsimpleapps.desert.code.camp.R$string: int conferenceId
+com.realsimpleapps.desert.code.camp.R$string: int contactUs
+com.realsimpleapps.desert.code.camp.R$string: int dcc
+com.realsimpleapps.desert.code.camp.R$string: int developedBy
+com.realsimpleapps.desert.code.camp.R$string: int domain
+com.realsimpleapps.desert.code.camp.R$string: int enterLogin
+com.realsimpleapps.desert.code.camp.R$string: int enterLoginMessage
+com.realsimpleapps.desert.code.camp.R$string: int filter
+com.realsimpleapps.desert.code.camp.R$string: int flurryAPIKey
+com.realsimpleapps.desert.code.camp.R$string: int interested
+com.realsimpleapps.desert.code.camp.R$string: int intro
+com.realsimpleapps.desert.code.camp.R$string: int location
+com.realsimpleapps.desert.code.camp.R$string: int mySchedule
+com.realsimpleapps.desert.code.camp.R$string: int mySessions
+com.realsimpleapps.desert.code.camp.R$string: int noInterestedMessage
+com.realsimpleapps.desert.code.camp.R$string: int noLoginMessage
+com.realsimpleapps.desert.code.camp.R$string: int noPresentingMessage
+com.realsimpleapps.desert.code.camp.R$string: int noPresentingMessageSessionsClosed
+com.realsimpleapps.desert.code.camp.R$string: int noScheduleMessage
+com.realsimpleapps.desert.code.camp.R$string: int offlineAlert
+com.realsimpleapps.desert.code.camp.R$string: int offlineTitle
+com.realsimpleapps.desert.code.camp.R$string: int presenting
+com.realsimpleapps.desert.code.camp.R$string: int problemWithListViewAlertMessage
+com.realsimpleapps.desert.code.camp.R$string: int realSimpleApps
+com.realsimpleapps.desert.code.camp.R$string: int refresh
+com.realsimpleapps.desert.code.camp.R$string: int removeSessions
+com.realsimpleapps.desert.code.camp.R$string: int removeSessionsMessage
+com.realsimpleapps.desert.code.camp.R$string: int removeSessionsPrompt
+com.realsimpleapps.desert.code.camp.R$string: int rsaEmail
+com.realsimpleapps.desert.code.camp.R$string: int rsaWeb
+com.realsimpleapps.desert.code.camp.R$string: int sendEmail
+com.realsimpleapps.desert.code.camp.R$string: int sessionPresenters
+com.realsimpleapps.desert.code.camp.R$string: int sessionRoom
+com.realsimpleapps.desert.code.camp.R$string: int sessionTime
+com.realsimpleapps.desert.code.camp.R$string: int subdomain
+com.realsimpleapps.desert.code.camp.R$string: int tbd
+com.realsimpleapps.desert.code.camp.R$string: int times
+com.realsimpleapps.desert.code.camp.R$string: int tracks
+com.realsimpleapps.desert.code.camp.R$string: int updateLogin
+com.realsimpleapps.desert.code.camp.R$string: int usernameEntryActionLabel
+com.realsimpleapps.desert.code.camp.R$string: int usernameEntryHint
+com.realsimpleapps.desert.code.camp.R$string: int when
+com.realsimpleapps.desert.code.camp.R$string: int whenTimes
+com.realsimpleapps.desert.code.camp.R$style: int AppTheme
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBar_MenuTextAppearance_Default
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBar_TextAppearance_Default
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBarLight
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBarOrange
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBarStyle_CCOrangeBackground
+com.realsimpleapps.desert.code.camp.R$style: int CCTheme_ActionBarStyle_LightBackground
+com.realsimpleapps.desertcodecamp.AboutActivity
+com.realsimpleapps.desertcodecamp.AboutActivity: AboutActivity()
+com.realsimpleapps.desertcodecamp.FilterListActivity
+com.realsimpleapps.desertcodecamp.FilterListActivity: FilterListActivity()
+com.realsimpleapps.desertcodecamp.FilteredSessionsListActivity
+com.realsimpleapps.desertcodecamp.FilteredSessionsListActivity: FilteredSessionsListActivity()
+com.realsimpleapps.desertcodecamp.MyScheduleListActivity
+com.realsimpleapps.desertcodecamp.MyScheduleListActivity: MyScheduleListActivity()
+com.realsimpleapps.desertcodecamp.MySessionsListActivity
+com.realsimpleapps.desertcodecamp.MySessionsListActivity: MySessionsListActivity()
+com.realsimpleapps.desertcodecamp.fragments.FilteredSessionsListFragment
+com.realsimpleapps.desertcodecamp.fragments.FilteredSessionsListFragment: FilteredSessionsListFragment()
+com.realsimpleapps.desertcodecamp.fragments.MyScheduleListFragment
+com.realsimpleapps.desertcodecamp.fragments.MyScheduleListFragment: MyScheduleListFragment()
+com.realsimpleapps.desertcodecamp.fragments.MySessionsListFragment
+com.realsimpleapps.desertcodecamp.fragments.MySessionsListFragment: MySessionsListFragment()
+com.realsimpleapps.desertcodecamp.fragments.SessionDetailFragment
+com.realsimpleapps.desertcodecamp.fragments.SessionDetailFragment: SessionDetailFragment()

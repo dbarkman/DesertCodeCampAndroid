@@ -3,6 +3,8 @@ package com.realsimpleapps.desertcodecamp.fragments;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.app.Fragment;
+import android.view.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -12,30 +14,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.actionbarsherlock.app.SherlockFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.FilterListActivity;
 import com.realsimpleapps.desertcodecamp.MyScheduleListActivity;
 import com.realsimpleapps.desertcodecamp.MySessionsListActivity;
 
-public class SessionDetailFragment extends SherlockFragment {
+public class SessionDetailFragment extends Fragment {
 
 	private static final String tag = "SessionDetailFragment";
 
 	private SharedPreferences displayPreferences;
 	private SharedPreferences.Editor displayPreferencesEditor;
 
-	private boolean myScheduleIsParent;
+	public boolean myScheduleIsParent;
 
 	private String sessionString;
 
@@ -52,7 +47,10 @@ public class SessionDetailFragment extends SherlockFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		displayPreferences = getActivity().getSharedPreferences("displayPreferences", Context.MODE_PRIVATE);
+        getActivity().getActionBar().setDisplayShowHomeEnabled(true);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        displayPreferences = getActivity().getSharedPreferences("displayPreferences", Context.MODE_PRIVATE);
 		displayPreferencesEditor = displayPreferences.edit();
 	}
 
@@ -77,32 +75,44 @@ public class SessionDetailFragment extends SherlockFragment {
 		setHasOptionsMenu(true);
 	}
 
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        MenuItem addSession = menu.findItem(R.id.addSession);
+        if (myScheduleIsParent == true) {
+            addSession.setEnabled(false);
+            addSession.setVisible(false);
+        }
+    }
+
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.session_detail_menu, menu);
 
-		MenuItem mi0 = menu.getItem(0);
-		if (myScheduleIsParent == true) {
-			mi0.setEnabled(false);
-			mi0.setVisible(false);
+        MenuItem addSession = menu.findItem(R.id.addSession);
+        if (myScheduleIsParent == true) {
+            addSession.setEnabled(false);
+            addSession.setVisible(false);
 		}
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.addSession:
-			addSessionToMySchedule();
-			return true;
-		case R.id.allSessions:
-			startActivity(new Intent(getActivity(), FilterListActivity.class));
-			return true;
-		case R.id.mySessions:
-			startActivity(new Intent(getActivity(), MySessionsListActivity.class));
-			return true;
-		case R.id.mySchedule:
-			startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
-			return true;
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+            case R.id.addSession:
+                addSessionToMySchedule();
+                return true;
+            case R.id.allSessions:
+                startActivity(new Intent(getActivity(), FilterListActivity.class));
+                return true;
+            case R.id.mySessions:
+                startActivity(new Intent(getActivity(), MySessionsListActivity.class));
+                return true;
+            case R.id.mySchedule:
+                startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
+                return true;
 		}
 		return false;
 	}

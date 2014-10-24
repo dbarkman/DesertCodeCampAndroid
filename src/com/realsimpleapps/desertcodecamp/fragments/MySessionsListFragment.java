@@ -1,16 +1,8 @@
 package com.realsimpleapps.desertcodecamp.fragments;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ListFragment;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -22,16 +14,14 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.AboutActivity;
@@ -39,8 +29,16 @@ import com.realsimpleapps.desertcodecamp.FilterListActivity;
 import com.realsimpleapps.desertcodecamp.MyScheduleListActivity;
 import com.realsimpleapps.desertcodecamp.adapters.SectionedArrayAdapter;
 import com.realsimpleapps.desertcodecamp.tasks.RestTask;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class MySessionsListFragment extends SherlockListFragment {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+public class MySessionsListFragment extends ListFragment {
 
 	private static final String tag = "MySessionsListFragment";
 
@@ -76,9 +74,12 @@ public class MySessionsListFragment extends SherlockListFragment {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);   
+		super.onCreate(savedInstanceState);
 
-		getActivity().registerReceiver(getMySessionsReceiver, new IntentFilter(getMySessionsApiAction));
+        getActivity().getActionBar().setDisplayShowHomeEnabled(true);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getActivity().registerReceiver(getMySessionsReceiver, new IntentFilter(getMySessionsApiAction));
 
 		displayPreferences = getActivity().getSharedPreferences("displayPreferences", Context.MODE_PRIVATE);
 		displayPreferencesEditor = displayPreferences.edit();
@@ -179,43 +180,46 @@ public class MySessionsListFragment extends SherlockListFragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.refresh:
-			FlurryAgent.logEvent("RefreshMySessions");
-			fetchSessions();
-			return true;
-		case R.id.changeFilter:
-			switch (filterType) {
-			case 0:
-				filterType = 1;
-				displayPreferencesEditor.putInt("mySessionsFilterType", 1);
-				item.setTitle(getActivity().getText(R.string.interested));
-				FlurryAgent.logEvent("MyPresentingSessions");
-				break;
-			case 1:
-				filterType = 0;
-				displayPreferencesEditor.putInt("mySessionsFilterType", 0);
-				item.setTitle(getActivity().getText(R.string.presenting));
-				FlurryAgent.logEvent("MyInterestedSessions");
-				break;
-			}
-			displayPreferencesEditor.commit();
-			fetchSessions();
-			return true;
-		case R.id.enterLogin:
-			getUsername();
-			return true;
-		case R.id.updateLogin:
-			getUsername();
-			return true;
-		case R.id.allSessions:
-			startActivity(new Intent(getActivity(), FilterListActivity.class));
-			return true;
-		case R.id.mySchedule:
-			startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
-			return true;
-		case R.id.about:
-			startActivity(new Intent(getActivity(), AboutActivity.class));
-			return true;
+            case android.R.id.home:
+                getActivity().onBackPressed();
+                return true;
+            case R.id.refresh:
+                FlurryAgent.logEvent("RefreshMySessions");
+                fetchSessions();
+                return true;
+            case R.id.changeFilter:
+                switch (filterType) {
+                case 0:
+                    filterType = 1;
+                    displayPreferencesEditor.putInt("mySessionsFilterType", 1);
+                    item.setTitle(getActivity().getText(R.string.interested));
+                    FlurryAgent.logEvent("MyPresentingSessions");
+                    break;
+                case 1:
+                    filterType = 0;
+                    displayPreferencesEditor.putInt("mySessionsFilterType", 0);
+                    item.setTitle(getActivity().getText(R.string.presenting));
+                    FlurryAgent.logEvent("MyInterestedSessions");
+                    break;
+                }
+                displayPreferencesEditor.commit();
+                fetchSessions();
+                return true;
+            case R.id.enterLogin:
+                getUsername();
+                return true;
+            case R.id.updateLogin:
+                getUsername();
+                return true;
+            case R.id.allSessions:
+                startActivity(new Intent(getActivity(), FilterListActivity.class));
+                return true;
+            case R.id.mySchedule:
+                startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(getActivity(), AboutActivity.class));
+                return true;
 		}
 		return false;
 	}
@@ -283,15 +287,16 @@ public class MySessionsListFragment extends SherlockListFragment {
 	}
 
 	private void fetchSessions() {
-		String shortName = getActivity().getString(R.string.shortName);
+		String subdomain = getActivity().getString(R.string.subdomain);
+		String domain = getActivity().getString(R.string.domain);
 		String myURI = "";
 		switch (filterType) {
 		case 0:
-			myURI = "Session.svc/GetMyInterestedInSessionsByLogin?login=" + login + "&shortName=" + shortName;
+			myURI = "Session.svc/GetMyInterestedInSessionsByLogin?login=" + login + "&subdomain=" + subdomain + "&domain=" + domain;
 			FlurryAgent.logEvent("FetchingMyInterestedSessions", true);
 			break;
 		case 1:
-			myURI = "Session.svc/GetMyPresentationsByLogin?login=" + login + "&shortName=" + shortName;
+			myURI = "Session.svc/GetMyPresentationsByLogin?login=" + login + "&subdomain=" + subdomain + "&domain=" + domain;
 			FlurryAgent.logEvent("FetchingMyPresentingSessions", true);
 			break;
 		}
@@ -346,7 +351,7 @@ public class MySessionsListFragment extends SherlockListFragment {
 			FlurryAgent.logEvent("No Interested Session Data");
 			break;
 		case 1:
-			noDataMessage = (String) getActivity().getText(R.string.noPresentingMessageSessionsClosed);
+			noDataMessage = (String) getActivity().getText(R.string.noPresentingMessage);
 			FlurryAgent.logEvent("No Presenting Session Data");
 			break;
 		}

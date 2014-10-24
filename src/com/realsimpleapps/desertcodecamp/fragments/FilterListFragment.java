@@ -1,18 +1,22 @@
 package com.realsimpleapps.desertcodecamp.fragments;
 
+import android.app.ListFragment;
 import android.app.ProgressDialog;
-import android.content.*;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.actionbarsherlock.app.SherlockListFragment;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
-import com.actionbarsherlock.view.MenuItem;
 import com.flurry.android.FlurryAgent;
 import com.realsimpleapps.desert.code.camp.R;
 import com.realsimpleapps.desertcodecamp.AboutActivity;
@@ -29,7 +33,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FilterListFragment extends SherlockListFragment {
+public class FilterListFragment extends ListFragment {
 
 	private static final String tag = "FilterListFragment";
 
@@ -54,8 +58,8 @@ public class FilterListFragment extends SherlockListFragment {
 
 	private void fetchSessions() {
 		progress = ProgressDialog.show(getActivity(), null, "Fetching Sessions", true); 
-		String campId = getActivity().getString(R.string.campId);
-		RestTask task = new RestTask(getActivity(), getAllSessionsApiAction, "Session.svc/GetSessionsByCampId?campId=" + campId); 
+		String conferenceId = getActivity().getString(R.string.conferenceId);
+		RestTask task = new RestTask(getActivity(), getAllSessionsApiAction, "Session.svc/GetSessionsByConferenceId?conferenceId=" + conferenceId);
 		task.execute();
 		FlurryAgent.logEvent("FetchingAllSessions", true);
 	}
@@ -137,41 +141,41 @@ public class FilterListFragment extends SherlockListFragment {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.refresh:
-			FlurryAgent.logEvent("RefreshAllSessions");
-			Intent broadcastIntent = new Intent();
-			broadcastIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
-			getActivity().sendBroadcast(broadcastIntent);
-			return true;
-		case R.id.changeFilter:
-			switch (filterType) {
-			case 0:
-				filterType = 1;
-				displayPreferencesEditor.putInt("allSessionsFilterType", 1);
-				item.setTitle(getActivity().getText(R.string.tracks));
-				FlurryAgent.logEvent("AllTimes");
-				break;
-			case 1:
-				filterType = 0;
-				displayPreferencesEditor.putInt("allSessionsFilterType", 0);
-				item.setTitle(getActivity().getText(R.string.times));
-				FlurryAgent.logEvent("AllTracks");
-				break;
-			}
-			displayPreferencesEditor.commit();
-			Intent changeFilterIntent = new Intent();
-			changeFilterIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
-			getActivity().sendBroadcast(changeFilterIntent);
-			return true;
-		case R.id.mySessions:
-			startActivity(new Intent(getActivity(), MySessionsListActivity.class));
-			return true;
-		case R.id.mySchedule:
-			startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
-			return true;
-		case R.id.about:
-			startActivity(new Intent(getActivity(), AboutActivity.class));
-			return true;
+            case R.id.refresh:
+                FlurryAgent.logEvent("RefreshAllSessions");
+                Intent broadcastIntent = new Intent();
+                broadcastIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
+                getActivity().sendBroadcast(broadcastIntent);
+                return true;
+            case R.id.changeFilter:
+                switch (filterType) {
+                case 0:
+                    filterType = 1;
+                    displayPreferencesEditor.putInt("allSessionsFilterType", 1);
+                    item.setTitle(getActivity().getText(R.string.tracks));
+                    FlurryAgent.logEvent("AllTimes");
+                    break;
+                case 1:
+                    filterType = 0;
+                    displayPreferencesEditor.putInt("allSessionsFilterType", 0);
+                    item.setTitle(getActivity().getText(R.string.times));
+                    FlurryAgent.logEvent("AllTracks");
+                    break;
+                }
+                displayPreferencesEditor.commit();
+                Intent changeFilterIntent = new Intent();
+                changeFilterIntent.setAction("com.realsimpleapps.desertcodecamp.allSessionRefresh");
+                getActivity().sendBroadcast(changeFilterIntent);
+                return true;
+            case R.id.mySessions:
+                startActivity(new Intent(getActivity(), MySessionsListActivity.class));
+                return true;
+            case R.id.mySchedule:
+                startActivity(new Intent(getActivity(), MyScheduleListActivity.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(getActivity(), AboutActivity.class));
+                return true;
 		}
 		return false;
 	}
